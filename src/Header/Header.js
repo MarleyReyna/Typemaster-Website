@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header>
             <img src={logo} alt='typemaster'></img>
-            <a href='#'>Pre-order now</a>
+            <a href='https://github.com/MarleyReyna'>Pre-order now</a>
         </header>
     );
 }

@@ -19,7 +19,7 @@ const Main = () => {
                             a high quality mechanical typing experience.
                         </p>
                         <div>
-                            <a href='#'>
+                            <a href='https://github.com/MarleyReyna'>
                                 Pre-order now
                             </a>
                             <p>Release on 5/27</p>
