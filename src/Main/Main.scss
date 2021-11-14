@@ -1,0 +1,508 @@
+$orange: #f16718;
+$peach: #ff9b62;
+$navy: #162542;
+$gray: #7b8bad;
+$lgtgray: #e8eff2;
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+main {
+  .first-section {
+    background-image: url("./Images/pattern-square.svg"),
+      url("./Images/pattern-square.svg");
+    background-position: right -7.25rem top, left -7.25rem bottom;
+    background-repeat: no-repeat;
+
+    .top-section {
+      font-family: "Barlow", sans-serif;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5.188rem;
+      margin: 5.188rem 10.313rem 0rem;
+      animation: 0.7s ease-out 0s 1 slideInFromTop;
+
+      .left-div {
+        h1 {
+          color: $navy;
+          font-weight: 900;
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+          text-transform: uppercase;
+          margin-top: 3.75rem;
+          margin-bottom: 1.5rem;
+        }
+
+        p {
+          color: $gray;
+          font-size: 1.125rem;
+          max-width: 44ch;
+          line-height: 1.625rem;
+          font-weight: 500;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          margin-top: 2.5rem;
+
+          a {
+            text-decoration: none;
+            color: white;
+            background-color: $orange;
+            border-radius: 8px;
+            padding: 1rem 1.688rem;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-right: 2.5rem;
+            line-height: 1.625rem;
+            text-transform: uppercase;
+            transition: all 300ms ease;
+          }
+
+          a:hover {
+            background-color: $peach;
+          }
+
+          p {
+            color: $gray;
+            font-weight: 700;
+            line-height: 1.625rem;
+          }
+        }
+      }
+
+      .right-div {
+        background-image: url("./Images/image-keyboard.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 33.75rem;
+        height: 30rem;
+        border-radius: 20px;
+      }
+    }
+
+    .bottom-section {
+      display: flex;
+      font-family: "Barlow", sans-serif;
+      align-items: center;
+      margin-top: 1.875rem;
+      margin-left: 10.313rem;
+      margin-right: 10.313rem;
+      display: flex;
+      animation: 0.7s ease-out 0s 1 slideInFromTop;
+
+      .keyboard-phone {
+        min-height: 30.094rem;
+        width: 15.938rem;
+        background-color: $orange;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 1.875rem;
+
+        .orange-filter {
+          background-image: url("./Images/image-phone-and-keyboard.jpg");
+          background-size: cover;
+          min-width: 100%;
+          min-height: 30.094rem;
+          opacity: 0.75;
+          mix-blend-mode: multiply;
+        }
+      }
+
+      .keyboard-glass {
+        background-image: url("./Images/image-glass-and-keyboard.jpg");
+        border-radius: 20px;
+        background-size: cover;
+        min-height: 30.094rem;
+        width: 27.813rem;
+      }
+
+      .text-container {
+        margin-left: 7.813rem;
+        h2 {
+          text-transform: uppercase;
+          font-weight: 900;
+          max-width: 8ch;
+          font-size: 2rem;
+          line-height: 2.25rem;
+          color: $navy;
+          margin-bottom: 1.688rem;
+        }
+
+        p {
+          line-height: 1.625rem;
+          color: $gray;
+          max-width: 30ch;
+        }
+      }
+    }
+  }
+
+  .second-section {
+    margin: 10.5rem 3rem 6rem 10.313rem;
+    animation: 0.7s ease-out 0s 1 slideInFromTop;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      li {
+        list-style: none;
+        max-width: 15.938rem;
+        margin-bottom: 2rem;
+
+        div {
+          background-color: $orange;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 16px;
+          width: 4.063rem;
+          height: 4.063rem;
+          margin-bottom: 3rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+          font-weight: 900;
+          color: $navy;
+          text-transform: uppercase;
+          margin-bottom: 1.5rem;
+        }
+
+        p {
+          line-height: 1.625rem;
+          color: $gray;
+          font-weight: 500;
+          font-size: 0.938rem;
+        }
+      }
+
+      .comp {
+        margin-right: 1.875rem;
+      }
+
+      .bluetooth {
+        margin-right: 1.875rem;
+      }
+
+      .battery {
+        margin-right: 1.875rem;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 78.125rem) {
+  main {
+    .first-section {
+      background-position: right -14.25rem top, left -14.25rem bottom;
+
+      .top-section {
+        margin-left: 3rem;
+        margin-right: 3rem;
+
+        p {
+          padding-right: 1rem;
+        }
+      }
+
+      .bottom-section {
+        margin-left: 3rem;
+        margin-right: 3rem;
+
+        .text-container {
+          margin-left: 3rem;
+        }
+      }
+    }
+
+    .second-section {
+      margin-left: 3rem;
+    }
+  }
+}
+
+@media only screen and(max-width: 63rem) {
+  main {
+    overflow: hidden;
+
+    .first-section {
+      background-image: none;
+      .top-section {
+        margin-left: 2.5rem;
+        margin-right: 0rem;
+        margin-top: 3.875rem;
+        justify-content: initial;
+
+        .left-div {
+          min-width: 21.188rem;
+
+          h1 {
+            font-size: 3rem;
+            line-height: 3rem;
+          }
+
+          p {
+            font-size: 1rem;
+            padding-right: 0;
+          }
+
+          div {
+            a {
+              margin-right: 2.313rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .right-div {
+          background-image: url("./Images/image-keyboard-tablet.jpg");
+          width: 29.875rem;
+          height: 26.563rem;
+          margin-left: 4.313rem;
+        }
+      }
+
+      .bottom-section {
+        margin-top: 2.5rem;
+
+        .keyboard-phone {
+          min-height: 20rem;
+          width: 13.375rem;
+          .orange-filter {
+            background-image: url("./Images/image-phone-and-keyboard-tablet.jpg");
+            min-height: 20rem;
+          }
+        }
+
+        .keyboard-glass {
+          background-image: url("./Images/image-glass-and-keyboard-tablet.jpg");
+          min-height: 20rem;
+          width: 27.813rem;
+        }
+
+        .text-container {
+          margin: 4.5rem 0 0 3rem;
+
+          p {
+            max-width: 45ch;
+          }
+        }
+      }
+    }
+
+    .second-section {
+      margin-left: 2.5rem;
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 51.125rem) {
+  main {
+    .first-section {
+      .bottom-section {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 2.5rem;
+        margin-right: 0;
+
+        .text-container {
+          margin: 4.5rem 0 0 0;
+          display: flex;
+          width: fit-content;
+          justify-self: flex-start;
+          max-width: 43.625rem;
+
+          h2 {
+            margin-right: 6.125rem;
+            min-width: 12.063rem;
+          }
+        }
+      }
+    }
+
+    .second-section {
+      margin-top: 8.875rem;
+      margin-bottom: 8.875rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 47.5rem) {
+  main {
+    .first-section {
+      .top-section {
+        .right-div {
+          margin-left: 1.5rem;
+        }
+      }
+
+      .bottom-section {
+        justify-content: center;
+        margin-left: 0;
+        transition: all 300ms ease;
+
+        .keyboard-phone {
+          min-height: 15.625rem;
+          width: 10.42rem;
+          .orange-filter {
+            min-height: 15.625rem;
+          }
+        }
+
+        .keyboard-glass {
+          min-height: 15.625rem;
+          width: 21.875rem;
+        }
+
+        .text-container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          h2 {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 39.06rem) {
+  main {
+    .first-section {
+      .top-section {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 4rem;
+
+        .left-div {
+          margin-left: 1.5rem;
+
+          h1 {
+            margin-top: 0;
+          }
+
+          div {
+            a {
+              padding: 0.688rem 0.875rem;
+              margin-right: 2rem;
+            }
+          }
+        }
+
+        .right-div {
+          background-image: url("./Images/image-keyboard-mobile.jpg");
+          margin-top: 4rem;
+          width: 23.25rem;
+          height: 20.688rem;
+          margin-left: 0;
+          align-self: center;
+        }
+      }
+
+      .bottom-section {
+        margin-left: 0;
+        transition: all 300ms ease;
+
+        .keyboard-phone {
+          min-height: 12.06rem;
+          width: 8.06rem;
+
+          .orange-filter {
+            background-image: url("./Images/image-phone-and-keyboard-mobile.jpg");
+            min-height: 12.06rem;
+          }
+        }
+
+        .keyboard-glass {
+          background-image: url("./Images/image-glass-and-keyboard-mobile.jpg");
+          min-height: 12.06rem;
+          width: 13.75rem;
+        }
+
+        .text-container {
+          align-items: center;
+
+          p {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .second-section {
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center;
+      margin-top: 6.9375rem;
+      margin-bottom: 6rem;
+
+      ul {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+
+        li {
+          max-width: 20.4375rem;
+
+          div {
+            margin: 0rem auto 3rem;
+          }
+        }
+
+        .comp {
+          margin-right: 0;
+        }
+
+        .bluetooth {
+          margin-right: 0;
+        }
+
+        .battery {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 25rem) {
+  main {
+    .first-section {
+      .top-section {
+        .right-div {
+          align-self: initial;
+          margin-left: 1.5rem;
+        }
+      }
+
+      .bottom-section {
+        .keyboard-phone {
+          margin-left: -2.45rem;
+        }
+      }
+    }
+  }
+}
